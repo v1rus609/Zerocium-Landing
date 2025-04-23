@@ -7,7 +7,6 @@
 body {
     font-family: 'Poppins', sans-serif; /* Use Poppins font */
     background-image: url('Zerocium Background.jpg'); /* Path to your uploaded background */
-    background-size: cover;  /* Make the background image stretch to cover the page */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Ensure the background image does not repeat */
     color: #333;
