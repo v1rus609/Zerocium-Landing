@@ -71,7 +71,6 @@ p {
     align-items: center;
     flex-direction: column;
     width: 100%; /* Full width */
-    min-height: 70vh; /* Take at least 70% of the viewport height */
     position: relative;
     padding: 10px; /* Optional: Adjust padding to give some space around content */
     text-align: center;
