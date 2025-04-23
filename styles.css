@@ -6,9 +6,10 @@
 
 body {
     font-family: 'Poppins', sans-serif; /* Use Poppins font */
-    background-image: url('Zerocium Background.jpg'); /* Path to your uploaded background */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Ensure the background image does not repeat */
+    background-image: url('Zerocium Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -19,13 +20,14 @@ header {
     padding: 20px;
     position: relative;
     width: 100%;
-    z-index: 2;  /* Keep header above the hero content */
+    z-index: 2;
 }
 
-.nav {
+nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribute items evenly */
     align-items: center;
+    width: 100%;
 }
 
 nav ul {
@@ -33,6 +35,7 @@ nav ul {
     list-style: none;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;  /* Allow the nav items to grow and fill the available space */
 }
 
 nav ul li {
@@ -46,12 +49,36 @@ nav ul li a {
     font-weight: normal;
 }
 
+/* Sign In Button Styles */
+.sign-in-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+    border: 1.5px solid #333;
+    padding: 0px 8px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: auto;
+}
+
+.sign-in-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.sign-in-icon {
+    margin-right: 8px; /* Space between the icon and text */
+    font-size: 20px; /* Size of the arrow icon */
+}
+
 footer {
     text-align: center;
     padding: 20px;
     position: relative;
     width: 100%;
-    margin-top: auto; /* Ensures footer is pushed to the bottom of the page */
+    margin-top: auto;
 }
 
 .social-links a {
@@ -70,32 +97,44 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%; /* Full width */
+    width: 100%;
+    min-height: 70vh;
     position: relative;
-    padding: 10px; /* Optional: Adjust padding to give some space around content */
+    padding: 10px;
     text-align: center;
-    flex-grow: 1; /* Allow hero section to take remaining space */
+    flex-grow: 1;
 }
 
 .hero-content {
     color: #333;
-    z-index: 2;  /* Ensure the text stays above the image */
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 2s forwards; /* Animation to fade and slide up */
 }
 
-.logo img {
-    width: 45%; /* Adjust logo size */
-    max-width: 250px;
-    object-fit: contain;
-    z-index: 2;  /* Ensure the image is above the text */
+.hero-content .logo {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s forwards 0.5s; /* Delay logo appearance */
 }
 
 .hero h1 {
     font-size: 36px;
     font-weight: normal;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s forwards 1s; /* Delay title appearance */
 }
 
-.cta-buttons a {
+.cta-buttons {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s forwards 1.5s; /* Delay buttons appearance */
+}
+
+.learn-more, .subscribe {
     display: inline-block;
     padding: 5px 24px;
     margin-right: 15px;
@@ -126,10 +165,53 @@ p {
     border: 2px solid #5c5c72;
 }
 
+.logo img {
+    width: 45%;
+    max-width: 250px;
+    object-fit: contain;
+    z-index: 2;
+}
+
 .hero-image img {
     margin-top: 5%;
     width: 100%;
     max-width: 750px;
     object-fit: contain;
-    z-index: 1; /* Ensure the image is behind the text */
+    z-index: 1;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: fadeInScale 2s forwards; /* Fade and scale-up the laptop image */
 }
+
+.cta-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.cta-button img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
