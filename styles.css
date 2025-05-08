@@ -204,6 +204,97 @@ nav ul li a {
     object-fit: contain; /* Ensure the aspect ratio is maintained */
 }
 
+/* General Box Styling */
+.info-box {
+    display: flex;
+    justify-content: center;
+background: rgb(93 93 93 / 10%);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+
+    margin-bottom: 50px;
+}
+
+/* Left Side of the Box */
+.info-box-left {
+    width: 60%;
+    color: #333;
+}
+
+.info-box-left h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.info-box-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-report {
+    font-size: 16px;
+    color: #007BFF;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.info-box-left ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-box-left ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.checkmark {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+/* Right Side of the Box (Image Section) */
+.info-box-right {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-box-right img {
+    object-fit: contain;
+}
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .info-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box-left,
+    .info-box-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .info-box-right img {
+        max-width: 80%; /* Adjust image size for smaller screens */
+    }
+
+    .info-box-left h3 {
+        font-size: 24px;
+    }
+
+    .info-box-left p,
+    .info-box-left ul li {
+        font-size: 16px;
+    }
+}
+
 
 .cta-text {
 	padding: 50px;
