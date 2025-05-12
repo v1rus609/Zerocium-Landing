@@ -178,8 +178,8 @@ nav ul li a {
     margin-bottom: 150px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    align-content: space-around;
+    justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
 }
 
@@ -203,49 +203,93 @@ nav ul li a {
     max-width: 300px; /* Set a max-width for the images */
     object-fit: contain; /* Ensure the aspect ratio is maintained */
 }
-
 /* General Box Styling */
 .info-box {
     display: flex;
-    justify-content: center;
-background: rgb(93 93 93 / 10%);
+	justify-content: space-around;
+    background: rgb(93 93 93 / 10%);
     backdrop-filter: blur(10px);
-    padding: 20px;
-
-    margin-bottom: 50px;
+    padding: 50px;
+    margin-bottom: 2px;
 }
 
 /* Left Side of the Box */
 .info-box-left {
-    width: 60%;
+    width: 40%;
     color: #333;
 }
 
 .info-box-left h3 {
-    font-size: 28px;
+	color:#616a6b;
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
+.info-box-left h4 {
+    font-size: 18px;
+    color:#616a6b;
+}
+
 .info-box-left p {
+	color:#616a6b;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
+/* Link Styling */
 .read-report {
     font-size: 16px;
-    color: #007BFF;
-    text-decoration: none;
+    color: #616a6b;
+    text-decoration: none; /* Remove default underline */
     margin-bottom: 20px;
+    position: relative; /* Required for absolute positioning of the underline */
 }
 
-.info-box-left ul {
+/* Always visible underline */
+.read-report::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: #616a6b;
+}
+
+/* Animation on hover */
+.read-report:hover::after {
+    transform: scaleX(0); /* Collapse the underline */
+    transition: transform 0.3s ease-out; /* Smooth transition */
+}
+
+/* Animation when the underline is gone (new animation effect) */
+.read-report:hover {
+    color: #616a6b; /* Change text color when hovered */
+}
+
+.read-report:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: #007BFF; /* Color for the animation */
+    animation: scaleEffect 0.3s forwards;
+}
+/* Right Side of the Box with Bullet Points */
+.info-box-right {
+    width: 35%;
+}
+
+.info-box-right ul {
     list-style: none;
     padding-left: 0;
 }
 
-.info-box-left ul li {
+.info-box-right li {
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -255,46 +299,97 @@ background: rgb(93 93 93 / 10%);
     margin-right: 10px;
 }
 
-/* Right Side of the Box (Image Section) */
-.info-box-right {
-    width: 35%;
+/* Checkmark and title inline */
+.checkmark-title {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: center; /* Align the checkmark and title horizontally */
+    margin-bottom: 10px; /* Space between the title and the description */
 }
 
+.checkmark-img {
+    width: 24px; /* Adjust size of the checkmark image */
+    height: 24px; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between checkmark and title */
+}
+
+/* Right Side with Image (for Box 2) */
 .info-box-right img {
+    max-width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .info-box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .info-box-left,
-    .info-box-right {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .info-box-right img {
-        max-width: 80%; /* Adjust image size for smaller screens */
-    }
-
-    .info-box-left h3 {
-        font-size: 24px;
-    }
-
-    .info-box-left p,
-    .info-box-left ul li {
-        font-size: 16px;
-    }
+/* Bullet Points Styling */
+.bullet-point {
+    margin-bottom: 20px; /* Space between each bullet point */
 }
 
+.bullet-point h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #616a6b;
+}
+
+.bullet-point p {
+	color: #616a6b;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Bullet Points Styling */
+.bullet-point {
+    margin-bottom: 20px; /* Space between each bullet point */
+}
+
+.bullet-point h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #616a6b;
+}
+
+.bullet-point p {
+	color: #616a6b;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* General Box Styling */
+.info-box2 {
+    display: flex;
+	justify-content: center;
+    background: rgb(93 93 93 / 10%);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    margin-bottom: 150px;
+}
+
+
+/* Styling for Each Statistic */
+.stat {
+    text-align: center;
+    width: 20%; /* Each stat takes up 30% of the width */
+}
+
+.stat-number {
+    font-size: 75px;
+    font-weight: 510;
+	color: #616a6b;
+    display: block; /* Ensure it stays as a block */
+    margin-bottom: -10px; /* Space below the stat number */
+}
+
+.stat p {
+	margin-top: 10px; /* Space below the stat number */
+    font-size: 14px;
+    color: #616a6b;
+    font-weight: 400;
+}
+
+.stat h4 {
+    color: #616a6b;
+}
 
 .cta-text {
 	padding: 50px;
@@ -347,26 +442,57 @@ background: rgb(93 93 93 / 10%);
 
 /* Box 3 (Static) - Text aligned to the right */
 .box-3 {
+	    height: 400px;
+    width: 100%;
     background: rgb(93 93 93 / 10%);
     backdrop-filter: blur(10px);
     text-align: right;
 }
 
 .box-3 .text-container {
-    text-align: right; /* Align text inside container to the right */
+    text-align: center; /* Align text inside container to the right */
 }
 
 .box-3 h3 {
+    color: #616a6b;
+    font-size: 40px;
+}
+
+.box-3 p {
+	margin-bottom: 20px;
+	color: #616a6b;
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.image-container2 {
+    width: 45%;
+    display: flex
+;
+}
+
+.box-4 {
+    background: rgb(93 93 93 / 10%);
+    backdrop-filter: blur(10px);
+    text-align: right;
+}
+
+.box-4 .text-container {
+    text-align: right; /* Align text inside container to the right */
+}
+
+.box-4 h3 {
     color: #616a6b;
     font-size: 30px;
     margin-bottom: 10px;
 }
 
-.box-3 p {
+.box-4 p {
 	    color: #616a6b;
     font-size: 18px;
     line-height: 1.5;
 }
+
 
 
 /* Scaling Lottie Animation */
@@ -429,5 +555,16 @@ background: rgb(93 93 93 / 10%);
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes scaleEffect {
+    0% {
+        width: 0;
+        left: 50%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
     }
 }
