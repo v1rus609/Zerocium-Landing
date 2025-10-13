@@ -55,7 +55,8 @@ nav ul li a {
 
 /* Sign In Button Styles */
 .sign-in-btn {
-    display: inline-flex;
+    display: inline-flex
+;
     align-items: center;
     color: #333;
     border: 1.5px solid #333;
@@ -63,13 +64,20 @@ nav ul li a {
     font-size: 16px;
     text-decoration: none;
     border-radius: 30px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-left: auto;
+    transition: background-color 0.3s 
+ease, color 0.3s 
+ease;
+    margin-left: 5px;
 }
+
 
 .sign-in-btn:hover {
     background-color: #333;
     color: #fff;
+}
+
+.sign-in-btn:hover img {
+    filter: brightness(0) invert(1); /* makes icon white */
 }
 
 .sign-in-icon {
@@ -567,4 +575,5 @@ nav ul li a {
         width: 100%;
         left: 0;
     }
+
 }
