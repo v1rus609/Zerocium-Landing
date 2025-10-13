@@ -5,13 +5,7 @@
     box-sizing: border-box;
 }
 
-.button1{
-    display: flex
-;
-    margin-top: -33px;
-    align-items: center;
-    justify-content: flex-end;
-}
+
 
 /* Body */
 body {
@@ -36,7 +30,13 @@ header {
     width: 100%;
     z-index: 2;
 }
-
+.button1{
+    display: flex
+;
+    margin-top: -33px;
+    align-items: center;
+    justify-content: flex-end;
+}
 nav {
     display: flex;
     justify-content: space-between; /* Distribute items evenly */
@@ -210,7 +210,6 @@ ease;
 
 /* The image container inside the box */
 .image-container {
-    width: 45%; /* Set image container width to 45% */
     display: flex;
     justify-content: center;
 }
@@ -257,6 +256,7 @@ ease;
 }
 
 /* Link Styling */
+/* Link Styling */
 .read-report {
     font-size: 16px;
     color: #616a6b;
@@ -276,13 +276,13 @@ ease;
     background-color: #616a6b;
 }
 
-/* Animation on hover */
+/* Animation on hover (underline disappearance) */
 .read-report:hover::after {
     transform: scaleX(0); /* Collapse the underline */
     transition: transform 0.3s ease-out; /* Smooth transition */
 }
 
-/* Animation when the underline is gone (new animation effect) */
+/* Animation effect when the underline disappears (new effect) */
 .read-report:hover {
     color: #616a6b; /* Change text color when hovered */
 }
@@ -297,6 +297,19 @@ ease;
     background-color: #007BFF; /* Color for the animation */
     animation: scaleEffect 0.3s forwards;
 }
+
+/* Keyframes for animation effect */
+@keyframes scaleEffect {
+    0% {
+        width: 0;
+        left: 50%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+
 /* Right Side of the Box with Bullet Points */
 .info-box-right {
     width: 35%;
@@ -373,10 +386,10 @@ ease;
     margin-bottom: 0;
 }
 
-/* General Box Styling */
+/* Info Box for Stats (Box 2) */
 .info-box2 {
     display: flex;
-	justify-content: center;
+    justify-content: space-evenly;
     background: rgb(93 93 93 / 10%);
     backdrop-filter: blur(10px);
     padding: 50px;
@@ -387,19 +400,19 @@ ease;
 /* Styling for Each Statistic */
 .stat {
     text-align: center;
-    width: 20%; /* Each stat takes up 30% of the width */
+    width: 20%; /
 }
 
 .stat-number {
     font-size: 75px;
     font-weight: 510;
-	color: #616a6b;
+    color: #616a6b;
     display: block; /* Ensure it stays as a block */
     margin-bottom: -10px; /* Space below the stat number */
 }
 
 .stat p {
-	margin-top: 10px; /* Space below the stat number */
+    margin-top: 10px; /* Space below the stat number */
     font-size: 14px;
     color: #616a6b;
     font-weight: 400;
@@ -410,19 +423,20 @@ ease;
 }
 
 .cta-text {
-	padding: 50px;
+    padding: 150px;
     text-align: left; /* Default text alignment */
 }
 
 /* Box 1 (Static) - Text aligned to the right */
 .box-1 {
+	height: auto;
     background: rgb(93 93 93 / 10%);
     backdrop-filter: blur(10px);
     text-align: right;
 }
 
 .box-1 .text-container {
-    text-align: right; /* Align text inside container to the right */
+    text-align: left; /* Align text inside container to the right */
 }
 
 .box-1 h3 {
@@ -575,16 +589,3 @@ ease;
         transform: scale(1);
     }
 }
-
-@keyframes scaleEffect {
-    0% {
-        width: 0;
-        left: 50%;
-    }
-    100% {
-        width: 100%;
-        left: 0;
-    }
-
-}
-
