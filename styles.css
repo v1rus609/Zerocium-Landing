@@ -11,7 +11,7 @@
 body {
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
-    background-image: url(bg.jpg);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -589,3 +589,4 @@ ease;
         transform: scale(1);
     }
 }
+
