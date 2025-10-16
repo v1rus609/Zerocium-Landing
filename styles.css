@@ -88,8 +88,8 @@ ease;
 }
 
 .hero {
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 100px;
     padding: 10px;
     text-align: center;
 }
@@ -180,7 +180,7 @@ ease;
     height: 400px;
     width: 100%;
     color: white;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     display: flex
 ;
     align-items: center;
@@ -212,7 +212,7 @@ ease;
 .info-box {
     display: flex;
 	justify-content: space-around;
-    background: rgb(93 93 93 / 10%);
+
     backdrop-filter: blur(10px);
     padding: 50px;
     margin-bottom: 2px;
@@ -378,10 +378,10 @@ ease;
 .info-box2 {
     display: flex;
     justify-content: space-evenly;
-    background: rgb(93 93 93 / 10%);
+
     backdrop-filter: blur(10px);
     padding: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 
@@ -416,7 +416,7 @@ ease;
 .box-1 {
     padding: 10px 20px;
     height: auto;
-    background: rgb(93 93 93 / 10%);
+
     backdrop-filter: blur(10px);
     text-align: right;
 }
@@ -461,7 +461,7 @@ ease;
 .box-3 {
 	    height: 400px;
     width: 100%;
-    background: rgb(93 93 93 / 10%);
+
     backdrop-filter: blur(10px);
     text-align: right;
 }
@@ -489,7 +489,7 @@ ease;
 }
 
 .box-4 {
-    background: rgb(93 93 93 / 10%);
+
     backdrop-filter: blur(10px);
     text-align: right;
 }
@@ -753,7 +753,7 @@ header {
 .box-1 {
     padding: 25px 25px;
     height: auto;
-    background: rgb(93 93 93 / 10%);
+
     backdrop-filter: blur(10px);
     text-align: right;
 	        margin-bottom: 75px;
@@ -816,7 +816,7 @@ header {
 .info-box {
 	gap: 30px;
         display: flex;
-        background: rgb(93 93 93 / 10%);
+
         backdrop-filter: blur(10px);
         padding: 25px 25px;
         margin-bottom: 2px;
@@ -855,7 +855,7 @@ header {
     .info-box2 {
         display: flex
 ;
-        background: rgb(93 93 93 / 10%);
+
         backdrop-filter: blur(10px);
         padding: 25px 25px;
         margin-bottom: 75px;
