@@ -748,6 +748,20 @@ header {
 }
 
 @media (max-width: 768px) {
+	
+	#cta-animation {
+    width: 115%;
+    max-width: 1000px;
+    height: auto;
+    transform-origin: center;
+    transition: transform 0.3s 
+ease-in-out;
+    position: absolute;
+    top: 30%;
+    right: -64%;
+    z-index: 1;
+}
+	
 	.brand2 {
     display: block;
 }
