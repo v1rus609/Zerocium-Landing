@@ -446,6 +446,7 @@ ease;
 
 /* Box 3 (Static) - Text aligned to the right */
 .box-3 {
+    margin-top: 40px;
     height: 400px;
     width: 100%;
     background: round;
@@ -466,7 +467,7 @@ ease;
 .box-3 p {
 	margin-bottom: 20px;
 	color: #484848;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 1.5;
 }
 
@@ -747,7 +748,33 @@ header {
     display: none;
 }
 
+.text-container1{
+    display: flex;
+	margin-left: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-container1 img {
+    width: 300px;
+}
+
+.text-container2 img {
+    width: 200px;
+}
+
 @media (max-width: 768px) {
+	
+	.text-container2 img {
+    width: 120px;
+}
+.text-container1 img {
+    width: 180px;
+}
+
+.text-container1 {
+    margin-left: 15px;
+}
 	
 	#cta-animation {
     width: 115%;
@@ -915,15 +942,18 @@ display:none;
  
 }
 
-.box-3 p {
-    margin-bottom: 20px;
-    color: #484848;
-    font-size: 18px;
-    line-height: 1.5;
-}
+    .box-3 p {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
 
-.box-3 {
-margin-bottom: 75px;
+    .box-3 {
+        height: 250px;
+        margin-bottom: 75px;
+    }
+	
+	.box-3 h3 {
+    font-size: 30px;
 }
 .box-4 {
 padding: 25px 25px;
