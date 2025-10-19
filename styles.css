@@ -56,21 +56,7 @@ nav ul li a {
 }
 
 /* Sign In Button Styles */
-.sign-in-btn {
-    display: inline-flex
-;
-    align-items: center;
-    color: #333;
-    border: 1.5px solid #333;
-    padding: 2px 8px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s 
-ease, color 0.3s 
-ease;
-    margin-left: 5px;
-}
+
 
 
 .sign-in-btn:hover {
@@ -376,12 +362,13 @@ ease;
 
 /* Info Box for Stats (Box 2) */
 .info-box2 {
-    display: flex;
+    border-top: 2px solid #f5f5f5;
+    display: flex
+;
     justify-content: space-evenly;
-
     backdrop-filter: blur(10px);
-    padding: 50px;
-    margin-bottom: 100px;
+    padding: 70px 50px;
+
 }
 
 
@@ -459,9 +446,10 @@ ease;
 
 /* Box 3 (Static) - Text aligned to the right */
 .box-3 {
-	    height: 400px;
+    height: 400px;
     width: 100%;
-
+    background: round;
+    background-image: url(boxbg.jpg);
     backdrop-filter: blur(10px);
     text-align: right;
 }
@@ -471,13 +459,13 @@ ease;
 }
 
 .box-3 h3 {
-    color: #616a6b;
+    color: #484848;
     font-size: 40px;
 }
 
 .box-3 p {
 	margin-bottom: 20px;
-	color: #616a6b;
+	color: #484848;
     font-size: 30px;
     line-height: 1.5;
 }
@@ -652,6 +640,7 @@ header {
   text-decoration: none;
   border-radius: var(--radius);
   transition: background-color 0.2s, color 0.2s;
+  margin-left: 5px;
 }
 .sign-in-btn:hover {
   background: var(--ink);
@@ -708,12 +697,11 @@ header {
     display: grid;
   }
 
-  .menu,
-  .auth {
+  .menu {
     display: none;
   }
 
-.nav-toggle:checked ~ .menu {
+.nav-toggle:checked ~ .menu, .auth {
         display: flex
 ;
         align-items: flex-end;
@@ -729,7 +717,7 @@ header {
         right: 0;
         padding: 10px 20px;
         border-top: 1px solid #ddd;
-        gap: 10px;
+        gap: 20px;
     }
 
 
@@ -739,16 +727,49 @@ header {
     font-size: 28px;
 }
 
-.nav-bar {
-    display: flex
+    .auth {
+        display: flex;
+        position: static;
+        flex-direction: column;
+    }
+	
+	
+    .nav-bar {
+        display: flex
 ;
-    align-items: center;
-    padding: 15px 0;
-    justify-content: flex-end;
+        align-items: center;
+        padding: 15px 0;
+        justify-content: space-between;
+    }
 }
+
+.brand2 {
+    display: none;
 }
 
 @media (max-width: 768px) {
+	.brand2 {
+    display: block;
+}
+	
+    .sign-in-btn {
+        display: flex
+;
+        margin-bottom: 20px;
+        align-items: center;
+        gap: 0px;
+        border: none;
+        padding: 0px 0px;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 0px;
+        transition: background-color 0.2s, color 0.2s;
+        margin-left: 5px;
+    }
+	
+	.sign-in-btn img {
+display:none;
+}
 
 .box-1 {
     padding: 25px 25px;
@@ -857,8 +878,8 @@ header {
 ;
 
         backdrop-filter: blur(10px);
-        padding: 25px 25px;
-        margin-bottom: 75px;
+        padding: 35px 25px;
+
         justify-content: space-between;
     }
 
@@ -882,7 +903,7 @@ header {
 
 .box-3 p {
     margin-bottom: 20px;
-    color: #616a6b;
+    color: #484848;
     font-size: 18px;
     line-height: 1.5;
 }
