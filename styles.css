@@ -621,7 +621,7 @@ header {
   transition: color 0.2s ease;
 }
 .menu a:hover {
-  color: var(--accent);
+  color: #ffffff;
 }
 
 /* Auth buttons */
@@ -636,8 +636,8 @@ header {
   gap: 8px;
   color: var(--ink);
   border: 1.5px solid var(--ink);
-  padding: 6px 12px;
-  font-size: 16px;
+  padding: 5px 7px;
+  font-size: 15px;
   text-decoration: none;
   border-radius: var(--radius);
   transition: background-color 0.2s, color 0.2s;
@@ -660,14 +660,14 @@ header {
   display: none;
 }
 .burger {
-  display: none;
-  width: 40px;
-  height: 40px;
-  place-items: center;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #fff;
-  cursor: pointer;
+    display: none;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid #dddddd00;
+    border-radius: 10px;
+    background: #ffffff00;
+    cursor: pointer;
 }
 .burger span {
   width: 20px;
@@ -789,9 +789,10 @@ ease-in-out;
     z-index: 1;
 }
 	
-	.brand2 {
-    display: block;
-}
+    .brand2 {
+        display: flex
+;
+    }
 	
     .sign-in-btn {
         display: flex
@@ -801,7 +802,7 @@ ease-in-out;
         gap: 0px;
         border: none;
         padding: 0px 0px;
-        font-size: 16px;
+        font-size: 14px;
         text-decoration: none;
         border-radius: 0px;
         transition: background-color 0.2s, color 0.2s;
