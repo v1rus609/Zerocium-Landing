@@ -113,12 +113,6 @@ p{
 
 }
 
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 .cta-buttons {
     gap: 10px;
     display: flex;
@@ -261,6 +255,7 @@ ease;
     left: 0;
     bottom: -5px;
     width: 100%;
+	color:red;
     height: 3px;
     background-color: #616a6b;
 }
@@ -273,7 +268,7 @@ ease;
 
 /* Animation effect when the underline disappears (new effect) */
 .read-report:hover {
-    color: #616a6b; /* Change text color when hovered */
+    color: #2563EB; /* Change text color when hovered */
 }
 
 .read-report:hover::before {
